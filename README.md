@@ -11,7 +11,7 @@ git submodule add <repository_url> <directory_name>
 Ej:
 ```
 git add .
-git commit -m "Add submodule"
+git commit -m "Add submodule auth"
 git push
 ```
 5. Inicializar y actualizar Sub-módulos, cuando alguien clona el repositorio por primera vez, debe de ejecutar el siguiente comando para inicializar y actualizar los sub-módulos
