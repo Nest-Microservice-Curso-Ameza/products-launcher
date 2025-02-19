@@ -1,5 +1,16 @@
-### Pasos para crear los Git Submodules
 
+
+
+
+## Dev
+
+1. Clonar el repositorio
+2. Crear un .env basado en el .env.template
+3. Ejecutar el comando `git submodule update --init --recursive` para reconstruir los sub-módulos
+4. Ejecutar el comando `docker compose up --build`
+
+
+### Pasos para crear los Git Submodules
 
 1. Crear un nuevo repositorio en GitHub
 2. Clonar el repositorio en la máquina local
@@ -11,7 +22,7 @@ git submodule add <repository_url> <directory_name>
 Ej:
 ```
 git add .
-git commit -m "Add submodule auth"
+git commit -m "Add submodule"
 git push
 ```
 5. Inicializar y actualizar Sub-módulos, cuando alguien clona el repositorio por primera vez, debe de ejecutar el siguiente comando para inicializar y actualizar los sub-módulos
@@ -29,3 +40,18 @@ Si se trabaja en el repositorio que tiene los sub-módulos, **primero actualizar
 
 Si se hace al revés, se perderán las referencias de los sub-módulos en el repositorio principal y tendremos que resolver conflictos.
 
+
+
+# Prod
+
+1. Clonar el repositorio
+2. Crear un .env basado en el .env.template
+3. Ejecutar el comando
+```
+docker compose -f docker-compose.prod.yml build
+```
+
+
+
+
+southamerica-east1-docker.pkg.dev/microservice-dev-451303/image-registry
